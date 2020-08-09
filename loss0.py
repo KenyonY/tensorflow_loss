@@ -1,3 +1,8 @@
+import os 
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"]="0, 1" # "-1" for cpu
+
+
 import tensorflow as tf
 from tensorflow.keras.losses import BinaryCrossentropy, MeanSquaredError, KLDivergence, mean_squared_error
 
